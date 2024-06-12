@@ -4,6 +4,27 @@ $(function () {
         paddingTop: '0',
         paddingBottom: '0',
         verticalCentered: false,
+        anchors:
+         ['main_visual', 'main_exhibition', 'main_introduction', 'main_news',
+              'main_customer', 'footer'],
+              afterLoad: function (a, i) {
+                $('.aside li')
+                    .eq(i - 1)
+                    .addClass('on')
+                    .siblings()
+                    .removeClass('on');
+                $('.main_full .section')
+                    .eq(i - 1)
+                    .addClass('on')
+                    .siblings()
+                    .removeClass('on');
+                // if (i == 2 || i == 4|| i == 5|| i == 6 || i == 7) {
+                //     $('.header').addClass('on')
+                // } else {
+                //     $('.header').removeClass('on')
+                // }
+            }
+
     });
 
     $('.main_visual_slide').slick({
@@ -32,8 +53,8 @@ $(function () {
 
     });
 
-    
-    ('.main_news .news .news_menu button').on('click', function () {
+
+    $('.main_news .news .news_menu button').on('click', function () {
         let idx = $(this).parent().index();
         $('.main_news .news .news_content>ul')
             .eq(idx)
@@ -43,7 +64,8 @@ $(function () {
             .removeClass('on');
 
 
-        $(this).parent().addClass('on')
+        $(this).parent()
+            .addClass('on')
             .siblings()
             .removeClass('on')
     });

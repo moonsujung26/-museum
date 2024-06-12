@@ -7,9 +7,9 @@
     <title>문수정 과제</title>
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/fonts.css">
-    <link rel="stylesheet" href="./css/jquery.fullpage.css">
-    <link rel="stylesheet" href="./css/slick.css">
     <link rel="stylesheet" href="./css/layout.css">
+    <link rel="stylesheet" href="./css/slick.css">
+    <link rel="stylesheet" href="./css/jquery.fullpage.css">
     <link rel="stylesheet" href="./css/style.css">
 
     <script src="./js/jquery-1.12.4.js"></script>
@@ -44,8 +44,25 @@
             </div>
         </div>
     </header>
-    <main class="main_full">
-        <secton class="main_visual section">
+
+
+
+    <aside class="aside">
+        <nav class="side_link">
+            <ul>
+                <li class="on"><a href="#main_visual">main</a></li>
+                <li><a href="#main_exhibition">02</a></li>
+                <li><a href="#main_introduction">03</a></li>
+                <li><a href="#main_news">04</a></li>
+                <li><a href="#main_customer">05</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+
+
+    <div class="main_full">
+        <section class="main_visual section">
             <div class="main_visual_slide">
                 <div class="itm itm01">
                     <div class="slg01">
@@ -59,9 +76,9 @@
                 <div class="itm itm03"></div>
                 <div class="itm itm04"></div>
             </div>
-        </secton>
+        </section>
 
-        <secton class="main_exhibition section">
+        <section class="main_exhibition section">
             <div class="inner">
                 <div class="tit">
                     <h2>전시안내</h2>
@@ -92,8 +109,8 @@
                     </div>
                 </div>
             </div>
-        </secton>
-        <secton class="main_introduction section ">
+        </section>
+        <section class="main_introduction section">
             <div class="inner">
                 <div class="tit">
                     <h2>박물관 시설 &amp; 박물관 안내도</h2>
@@ -134,9 +151,9 @@
                     </div>
                 </div>
             </div>
-        </secton>
+        </section>
 
-        <secton class="main_news section">
+        <section class="main_news section">
             <h2 class="blind">메인뉴스</h2>
             <div class="inner">
                 <div class="tit">
@@ -184,7 +201,7 @@
                             </ul>
                         </div>
                         <div class="webtoon">
-                            웹툰임당
+                          <h3>박물관 웹툰 보러가기</h3>
                         </div>
                     </div>
                     <div class="event">
@@ -192,9 +209,11 @@
                     </div>
                 </div>
             </div>
-        </secton>
-    </main>
-    <footer class="footer"></footer>
+        </section>
+        <section class="main_customer"></section>
+        <footer class="footer" fp-auto-height></footer>
+    </div>
+
 </body>
 
 </html>
