@@ -4,33 +4,35 @@ $(function () {
         paddingTop: '0',
         paddingBottom: '0',
         verticalCentered: false,
+        responsiveWidth: 1200,
         anchors:
-         ['main_visual', 'main_exhibition', 'main_introduction', 'main_news',
-              'main_customer', 'footer'],
-              afterLoad: function (a, i) {
-                $('.aside li')
-                    .eq(i - 1)
-                    .addClass('on')
-                    .siblings()
-                    .removeClass('on');
-                $('.main_full .section')
-                    .eq(i - 1)
-                    .addClass('on')
-                    .siblings()
-                    .removeClass('on');
-                // if (i == 2 || i == 4|| i == 5|| i == 6 || i == 7) {
-                //     $('.header').addClass('on')
-                // } else {
-                //     $('.header').removeClass('on')
-                // }
-            }
+            ['main_visual', 'main_exhibition', 'main_introduction', 'main_news',
+                'main_customer', 'footer'],
+        afterLoad: function (a, i) {
+            $('.aside li')
+                .eq(i - 1)
+                .addClass('on')
+                .siblings()
+                .removeClass('on');
+            $('.main_full .section')
+                .eq(i - 1)
+                .addClass('on')
+                .siblings()
+                .removeClass('on');
+            // if (i == 2 || i == 4|| i == 5|| i == 6 || i == 7) {
+            //     $('.header').addClass('on')
+            // } else {
+            //     $('.header').removeClass('on')
+            // }
+        },
+        autoScrolling:true
 
     });
 
     $('.main_visual_slide').slick({
         arrows: true,
         dots: true,
-        autoplay: true,
+        // autoplay: true,
         pauseOnHover: false
     });
 
@@ -40,7 +42,8 @@ $(function () {
         dots: true,
         autoplay: true,
         pauseOnHover: false,
-        useTransform: false
+        useTransform: false,
+        slidesToShow: 1
     });
 
     $('.more a').on('mouseenter', function (e) {
@@ -69,6 +72,14 @@ $(function () {
             .siblings()
             .removeClass('on')
     });
+
+    $('.main_news .event .event_slide').slick({
+        slidesToShow: 1,
+        // dots: true,
+        arrows: false,
+        dots:true,
+    });
+
 
 
 })
